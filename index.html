@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kimberly Gu | Data Science & Product Management Portfolio</title>
+  <meta name="description" content="Personal portfolio of Kimberly Gu, a student at the University of Washington pursuing dual degrees in Informatics and Geography (Data Science). Aspiring Data Scientist and Product Manager.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets & Favicon -->
+  <link rel="icon" type="image/png" href="assets/space_kitty_logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Particles Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Background Glowing Orbs -->
+  <div class="glowing-orb orb-1"></div>
+  <div class="glowing-orb orb-2"></div>
+  <div class="glowing-orb orb-3"></div>
+
+  <!-- Header Navigation -->
+  <header id="main-header" class="header-nav">
+    <div class="header-container">
+      <a href="#hero" class="logo-monogram" id="logo-link">
+        <img src="assets/space_kitty_logo.png" alt="Space Kitty Logo" class="logo-img">
+        <span class="logo-text"><span class="logo-k">K</span><span class="logo-g">G</span></span>
+      </a>
+      <nav class="nav-menu" id="navigation-menu">
+        <a href="#experience" class="nav-link" id="nav-experience">Experience</a>
+        <a href="#projects" class="nav-link" id="nav-projects">Projects</a>
+        <a href="#about" class="nav-link" id="nav-about">About</a>
+        <a href="#skills" class="nav-link" id="nav-skills">Skills</a>
+        <a href="#contact" class="nav-link btn-contact-nav" id="nav-contact">Contact</a>
+      </nav>
+      <!-- Mobile menu toggle -->
+      <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title animate-title">Kimberly Gu</h1>
+        
+        <h2 class="hero-subtitle animate-fade-in-delayed">
+          <span class="gradient-text">Data Science</span> • <span class="gradient-text">Product Management</span>
+        </h2>
+        
+        <p class="hero-description animate-fade-in-delayed">
+          I am an Informatics and Geography student at the University of Washington pursuing Departmental Honors in Informatics. I enjoy building data-driven products that combine <span class="gradient-text">AI</span>, analytics, <span class="gradient-text">human-centered design</span>, and technology to solve meaningful problems.
+        </p>
+
+        <p class="hero-tagline animate-fade-in-delayed">
+          Turning data into decisions. Building products with purpose.
+        </p>
+        
+        <div class="hero-cta-buttons animate-fade-in-delayed">
+          <a href="#contact" class="btn btn-primary" id="hero-cta-contact">Let's Connect</a>
+          <a href="assets/portrait.png" download="Kimberly_Gu_Resume_Placeholder.pdf" class="btn btn-secondary" id="hero-cta-resume">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            Resume
+          </a>
+        </div>
+        
+        <!-- Social Icons Grid -->
+        <div class="social-links hero-socials animate-fade-in-delayed">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" id="hero-social-github" aria-label="GitHub">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" id="hero-social-linkedin" aria-label="LinkedIn">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="mailto:example@uw.edu" class="social-icon-link" id="hero-social-email" aria-label="Email">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span class="mouse-icon"><span class="wheel"></span></span>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section-container about-section reveal-element">
+      <div class="section-grid two-column">
+        <div class="about-text-column">
+          <span class="section-pretitle">Who I Am</span>
+          <h2 class="section-title">Hey, this is me.</h2>
+          <div class="paragraph-stack">
+            <p>
+              I'm Kimberly Gu, a student at the University of Washington pursuing dual degrees in Informatics and Geography (Data Science), along with Departmental Honors in Informatics.
+            </p>
+            <p>
+              My interests sit at the intersection of data science, artificial intelligence, product management, and human-centered technology. I enjoy transforming complex datasets into insights, building scalable products, and designing experiences that solve real user problems.
+            </p>
+            <p>
+              Through research, leadership, and software projects, I've developed a strong foundation in analytics, machine learning, data engineering, and collaborative product development.
+            </p>
+          </div>
+        </div>
+        <div class="about-visual-column">
+          <div class="portrait-container">
+            <div class="portrait-glow"></div>
+            <img src="assets/portrait.png" alt="Kimberly Gu Portrait Illustration" class="portrait-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-container education-section reveal-element">
+      <div class="section-header-centered">
+        <span class="section-pretitle">Academic Path</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      
+      <div class="education-card glass-panel">
+        <div class="education-header">
+          <div class="education-inst-logo">
+            <svg class="uw-logo" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="48" fill="rgba(166, 108, 255, 0.1)" stroke="var(--violet-accent)" stroke-width="2"/>
+              <text x="50%" y="60%" font-size="28" font-family="'Outfit', sans-serif" font-weight="800" fill="white" text-anchor="middle">UW</text>
+            </svg>
+          </div>
+          <div class="education-title-meta">
+            <h3>University of Washington</h3>
+            <p class="edu-date">2024 – 2028</p>
+            <div class="edu-degrees">
+              <span class="degree-badge">B.S. Informatics</span>
+              <span class="degree-badge">B.A. Geography (Data Science)</span>
+            </div>
+            <p class="edu-honors">Departmental Honors in Informatics</p>
+            <div class="edu-stats">
+              <span>GPA: <strong>3.99</strong></span>
+              <span class="bullet-separator"></span>
+              <span>Dean's List Honoree</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="coursework-categories">
+          <!-- Data Science Category -->
+          <div class="coursework-cat-card">
+            <div class="cat-icon-container text-pink">
+              <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h4>Data Science</h4>
+            <ul class="coursework-list">
+              <li>Machine Learning</li>
+              <li>Data Mining</li>
+              <li>Statistical Analysis</li>
+              <li>Data Visualization</li>
+              <li>SQL</li>
+              <li>Databases</li>
+            </ul>
+          </div>
+          <!-- Product & Design Category -->
+          <div class="coursework-cat-card">
+            <div class="cat-icon-container text-violet">
+              <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+              </svg>
+            </div>
+            <h4>Product & Design</h4>
+            <ul class="coursework-list">
+              <li>Product Management</li>
+              <li>Human-Centered Design</li>
+              <li>UX Research</li>
+              <li>Information Architecture</li>
+              <li>Design Thinking</li>
+            </ul>
+          </div>
+          <!-- Engineering Category -->
+          <div class="coursework-cat-card">
+            <div class="cat-icon-container text-cyan">
+              <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h4>Engineering</h4>
+            <ul class="coursework-list">
+              <li>Full-stack Development</li>
+              <li>Software Engineering</li>
+              <li>Algorithms</li>
+              <li>Data Structures</li>
+              <li>Cloud Fundamentals</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-container experience-section reveal-element">
+      <div class="section-header-centered">
+        <span class="section-pretitle">Career Milestones</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <!-- Experience Timeline -->
+      <div class="timeline-container">
+        
+        <!-- Experience Card 1 -->
+        <div class="timeline-item glass-panel">
+          <div class="timeline-badge-point"></div>
+          <div class="timeline-header">
+            <span class="experience-role">Data Analyst</span>
+            <span class="experience-company">University of Washington</span>
+            <span class="experience-duration">2024 – Present</span>
+          </div>
+          <div class="experience-content">
+            <ul class="experience-bullet-list">
+              <li>Built Python workflows that transformed historical records into structured datasets for research.</li>
+              <li>Designed reproducible data pipelines and documentation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience Card 2 -->
+        <div class="timeline-item glass-panel">
+          <div class="timeline-badge-point"></div>
+          <div class="timeline-header">
+            <span class="experience-role">Office Assistant</span>
+            <span class="experience-company">University of Washington</span>
+            <span class="experience-duration">2024 – Present</span>
+          </div>
+          <div class="experience-content">
+            <ul class="experience-bullet-list">
+              <li>Improved operational efficiency through scheduling coordination, resource management, and cross-functional communication.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience Card 3 -->
+        <div class="timeline-item glass-panel">
+          <div class="timeline-badge-point"></div>
+          <div class="timeline-header">
+            <span class="experience-role">Executive Officer</span>
+            <span class="experience-company">Data Science Society</span>
+            <span class="experience-duration">2024 – Present</span>
+          </div>
+          <div class="experience-content">
+            <ul class="experience-bullet-list">
+              <li>Co-led one of UW's largest student data organizations.</li>
+              <li>Managed event operations, partnerships, marketing, and community engagement.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section-container projects-section reveal-element">
+      <div class="section-header-centered">
+        <span class="section-pretitle">My Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card glass-panel">
+          <div class="project-img-wrapper">
+            <img src="assets/restaurant_rec.png" alt="Restaurant Recommendation Platform Preview" class="project-img">
+            <div class="project-card-overlay"></div>
+          </div>
+          <div class="project-card-content">
+            <div class="project-badge-row">
+              <span class="badge">Python</span>
+              <span class="badge">FastAPI</span>
+              <span class="badge">Machine Learning</span>
+              <span class="badge">React</span>
+            </div>
+            <h3 class="project-card-title">Restaurant Recommendation Platform</h3>
+            <p class="project-card-desc">
+              A personalized recommendation system using collaborative filtering and matrix factorization algorithms to deliver high-accuracy, real-time dining suggestions based on historical user interactions and ratings.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-project-link link-github">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                GitHub
+              </a>
+              <a href="#" class="btn-project-link link-demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-panel">
+          <div class="project-img-wrapper">
+            <img src="assets/pipeline.png" alt="Historical Data Processing Pipeline Preview" class="project-img">
+            <div class="project-card-overlay"></div>
+          </div>
+          <div class="project-card-content">
+            <div class="project-badge-row">
+              <span class="badge">Python</span>
+              <span class="badge">Pandas</span>
+              <span class="badge">OCR</span>
+              <span class="badge">SQL</span>
+            </div>
+            <h3 class="project-card-title">Historical Data Processing Pipeline</h3>
+            <p class="project-card-desc">
+              An end-to-end, automated ETL data engineering pipeline that ingests historical text records, utilizes OCR modeling for digitization, normalizes unstructured text, and populates a secure relational database.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-project-link link-github">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                GitHub
+              </a>
+              <a href="#" class="btn-project-link link-demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-panel">
+          <div class="project-img-wrapper">
+            <img src="assets/gis_analysis.png" alt="Washington Food Accessibility GIS Analysis Preview" class="project-img">
+            <div class="project-card-overlay"></div>
+          </div>
+          <div class="project-card-content">
+            <div class="project-badge-row">
+              <span class="badge">QGIS</span>
+              <span class="badge">Python</span>
+              <span class="badge">Spatial Analytics</span>
+              <span class="badge">Pandas</span>
+            </div>
+            <h3 class="project-card-title">Washington Food Accessibility GIS Analysis</h3>
+            <p class="project-card-desc">
+              A comprehensive geospatial analysis mapping and correlating socioeconomic variables with grocery network proximities across Washington state, identifying key food deserts to inform local food bank allocations.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-project-link link-github">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                GitHub
+              </a>
+              <a href="#" class="btn-project-link link-demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass-panel">
+          <div class="project-img-wrapper">
+            <img src="assets/ai_matchmaker.png" alt="AI Matchmaker Concept Preview" class="project-img">
+            <div class="project-card-overlay"></div>
+          </div>
+          <div class="project-card-content">
+            <div class="project-badge-row">
+              <span class="badge">Machine Learning</span>
+              <span class="badge">GNNs</span>
+              <span class="badge">NLP</span>
+              <span class="badge">Next.js</span>
+            </div>
+            <h3 class="project-card-title">AI Matchmaker Concept</h3>
+            <p class="project-card-desc">
+              An algorithm concept exploring semantic network clustering. Pairs students for collaborative project sprints based on complementary technical skill metrics and matching research interest profiles.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-project-link link-github">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                GitHub
+              </a>
+              <a href="#" class="btn-project-link link-demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card glass-panel">
+          <div class="project-img-wrapper">
+            <img src="assets/portfolio_thumb.png" alt="Portfolio Website Preview" class="project-img">
+            <div class="project-card-overlay"></div>
+          </div>
+          <div class="project-card-content">
+            <div class="project-badge-row">
+              <span class="badge">HTML5</span>
+              <span class="badge">CSS3</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">Glassmorphism</span>
+            </div>
+            <h3 class="project-card-title">Portfolio Website</h3>
+            <p class="project-card-desc">
+              A bespoke portfolio showcasing data science and product management portfolios, engineered with vanilla CSS glassmorphic variables, interactive mouse-tracking backgrounds, and canvas-driven particles.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-project-link link-github">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                GitHub
+              </a>
+              <a href="#" class="btn-project-link link-demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card glass-panel">
+          <div class="project-img-wrapper">
+            <img src="assets/wordplay.png" alt="Wordplay Research Preview" class="project-img">
+            <div class="project-card-overlay"></div>
+          </div>
+          <div class="project-card-content">
+            <div class="project-badge-row">
+              <span class="badge">NLP</span>
+              <span class="badge">BERT</span>
+              <span class="badge">Linguistics</span>
+              <span class="badge">Python</span>
+            </div>
+            <h3 class="project-card-title">Wordplay Research</h3>
+            <p class="project-card-desc">
+              Natural Language Processing research project using transformer models to analyze structural semantics and lexical pattern complexity in human wordplay and linguistic games.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-project-link link-github">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                GitHub
+              </a>
+              <a href="#" class="btn-project-link link-demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-container skills-section reveal-element">
+      <div class="section-header-centered">
+        <span class="section-pretitle">Competency Grid</span>
+        <h2 class="section-title">Skills & Capabilities</h2>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Skill Card 1: Data Science -->
+        <div class="skill-card glass-panel">
+          <div class="skill-card-header text-pink">
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+            <h3>Data Science</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">SQL</span>
+            <span class="skill-badge">Machine Learning</span>
+            <span class="skill-badge">Data Analysis</span>
+            <span class="skill-badge">Data Visualization</span>
+            <span class="skill-badge">Pandas</span>
+            <span class="skill-badge">NumPy</span>
+            <span class="skill-badge">Statistics</span>
+            <span class="skill-badge">Data Engineering</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 2: Product -->
+        <div class="skill-card glass-panel">
+          <div class="skill-card-header text-violet">
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            <h3>Product</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-badge">Product Strategy</span>
+            <span class="skill-badge">User Research</span>
+            <span class="skill-badge">Roadmapping</span>
+            <span class="skill-badge">Stakeholder Communication</span>
+            <span class="skill-badge">Agile</span>
+            <span class="skill-badge">Wireframing</span>
+            <span class="skill-badge">Documentation</span>
+            <span class="skill-badge">Market Analysis</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 3: Technical -->
+        <div class="skill-card glass-panel">
+          <div class="skill-card-header text-cyan">
+            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <h3>Technical</h3>
+          </div>
+          <div class="skill-list">
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">GitHub</span>
+            <span class="skill-badge">Figma</span>
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">React</span>
+            <span class="skill-badge">Firebase</span>
+            <span class="skill-badge">QGIS</span>
+            <span class="skill-badge">Microsoft Office</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="section-container leadership-section reveal-element">
+      <div class="section-header-centered">
+        <span class="section-pretitle">Impact & Initiative</span>
+        <h2 class="section-title">Leadership</h2>
+      </div>
+
+      <div class="leadership-grid">
+        
+        <!-- Leadership Card 1 -->
+        <div class="leadership-card glass-panel">
+          <div class="leadership-icon-box text-pink">
+            <svg class="lead-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h4>Data Science Society Executive</h4>
+          <p>Co-leading student operations, managing event planning, marketing strategies, industry partnerships, and community engagement for UW's largest student data organization.</p>
+        </div>
+
+        <!-- Leadership Card 2 -->
+        <div class="leadership-card glass-panel">
+          <div class="leadership-icon-box text-violet">
+            <svg class="lead-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h4>Research Collaborator</h4>
+          <p>Collaborating with academic researchers to optimize parsing pipelines and data curation workflows for unstructured datasets, facilitating academic research and insights.</p>
+        </div>
+
+        <!-- Leadership Card 3 -->
+        <div class="leadership-card glass-panel">
+          <div class="leadership-icon-box text-cyan">
+            <svg class="lead-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <h4>Department of Biochemistry Office Assistant</h4>
+          <p>Supervising administrative tasks, coordinating schedules, and managing communication pathways across department members and university stakeholders to improve operations.</p>
+        </div>
+
+        <!-- Leadership Card 4 -->
+        <div class="leadership-card glass-panel">
+          <div class="leadership-icon-box text-pink">
+            <svg class="lead-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h4>Cross-functional Team Leadership</h4>
+          <p>Driving student-led project groups from problem definition to conceptual design, bridging product strategy with clean analytical pipelines.</p>
+        </div>
+
+        <!-- Leadership Card 5 -->
+        <div class="leadership-card glass-panel">
+          <div class="leadership-icon-box text-violet">
+            <svg class="lead-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h4>Event Planning & Community Building</h4>
+          <p>Organizing campus networking sessions, career panels, and interactive data analysis workshops to foster professional student growth and community engagement.</p>
+        </div>
+
+        <!-- Leadership Card 6 -->
+        <div class="leadership-card glass-panel">
+          <div class="leadership-icon-box text-cyan">
+            <svg class="lead-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <h4>Public Speaking & Mentorship</h4>
+          <p>Presenting technical data workflows to large groups of peers and mentoring underclassmen on data science fundamentals and PM pathways.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-container contact-section reveal-element">
+      <div class="contact-card glass-panel">
+        <span class="section-pretitle">Connect With Me</span>
+        <h2 class="contact-title">Let's build something impactful together.</h2>
+        <p class="contact-description">
+          Whether you want to discuss data science opportunities, product management ideas, collaborative research, or just say hello, my inbox is always open.
+        </p>
+
+        <!-- Social Action Items -->
+        <div class="contact-methods-grid">
+          
+          <a href="mailto:example@uw.edu" class="contact-method-item" id="contact-email">
+            <div class="contact-method-icon-wrapper text-pink">
+              <svg class="contact-method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-method-details">
+              <span class="contact-method-label">Email Me</span>
+              <span class="contact-method-value">example@uw.edu</span>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-method-item" id="contact-linkedin">
+            <div class="contact-method-icon-wrapper text-violet">
+              <svg class="contact-method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </div>
+            <div class="contact-method-details">
+              <span class="contact-method-label">Connect on LinkedIn</span>
+              <span class="contact-method-value">linkedin.com/in/kimberlygu</span>
+            </div>
+          </a>
+
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-method-item" id="contact-github">
+            <div class="contact-method-icon-wrapper text-cyan">
+              <svg class="contact-method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </div>
+            <div class="contact-method-details">
+              <span class="contact-method-label">Follow on GitHub</span>
+              <span class="contact-method-value">github.com/kimberlygu</span>
+            </div>
+          </a>
+
+          <a href="assets/portrait.png" download="Kimberly_Gu_Resume_Placeholder.pdf" class="contact-method-item" id="contact-resume">
+            <div class="contact-method-icon-wrapper text-pink">
+              <svg class="contact-method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <div class="contact-method-details">
+              <span class="contact-method-label">Download Resume</span>
+              <span class="contact-method-value">Kimberly_Gu_Resume.pdf</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-container">
+    <div class="footer-content">
+      <p class="footer-design-by">Designed and developed by Kimberly Gu</p>
+      <p class="footer-copyright">&copy; 2026 Kimberly Gu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script files -->
+  <script src="script.js"></script>
+</body>
+</html>
