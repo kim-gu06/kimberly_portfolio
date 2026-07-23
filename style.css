@@ -1072,6 +1072,13 @@ img {
   margin-top: 24px;
 }
 
+.projects-grid:has(> :only-child) {
+  grid-template-columns: 1fr;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: 968px) {
   .projects-grid {
     grid-template-columns: 1fr;
